@@ -1,0 +1,460 @@
+
+body{
+    background-color: #1B2632;
+}
+
+body #bg-img{
+    z-index: 2;
+    border-radius: 200px;
+    top: 130px;
+    right: 50px;
+    width: 400px;
+    position: absolute;
+    box-shadow: 
+        0 15px 25px rgba(0,0,0,0.45), 
+        0 0 10px rgba(255,255,255,0.2) inset;
+    animation-name: fading;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+@media (max-width: 480px) {
+    #bg-img {
+        left: 180px; 
+        margin-top: 50px;
+        max-width: 300px;
+    }
+}
+
+#h1{
+    font-family: "Brush Script MT", "Lucida Handwriting", cursive;
+    color: #FFF;
+    font-weight: 100;
+    font-size: 80px;
+    text-decoration: none; 
+    max-width: 400px;
+    min-width: 300px;
+    margin-left: 20px;
+    margin-top: -80px;
+    position: fixed;
+    z-index: 3;
+    text-shadow:
+        2px 2px 0 #FFB162,  /* dark brown shadow */
+        4px 4px 0 #6A2C22,  /* deeper brown layer */
+        6px 6px 10px #1B2632; /* soft black drop shadow */   
+    animation-name: slide-text2;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+@media (max-width: 480px) {
+    #h1 {
+        font-size: 90px; /* You can adjust this value */
+        margin-left: 20px; 
+        margin-top: 650px;
+        animation-name: slide-text;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        color: #1B2632;
+    }
+}
+
+#h2{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1B2632;
+    font-weight: 600;
+    font-size: 50px;
+    text-decoration: none;
+    max-width: 400px;
+    min-width: 300px;
+    margin-left: 20px;
+    margin-top: 250px;
+    position: fixed;
+    z-index: 3;
+
+    animation-name: slide-text;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+@media (max-width: 480px) {
+    #h2 {
+        font-size: 40px; /* You can adjust this value */
+        margin-left: 20px; 
+        margin-top: 800px;
+    }
+}
+
+#h3{
+    font-family: Helvetica;
+    color: #1B2632;
+    background-color: #FFF;
+    border: #1B2632 solid 2px;
+    border-radius: 90px;
+    padding: 10px 12px 8px 12px;
+    font-weight: 100;
+    font-size: 30px;
+    text-decoration: none; 
+    max-width: 600px;
+    margin-left: 860px;
+    margin-top: 400px;
+    position: fixed;
+    z-index: 2;
+    cursor: none;
+    box-shadow: 
+        0 15px 25px rgba(0,0,0,0.45), 
+        0 0 10px rgba(255,255,255,0.2) inset;
+    
+    animation-name: slide-text;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+@media (max-width: 480px) {
+    #h3 {
+        font-size: 25px; /* You can adjust this value */
+        margin-left: 180px; 
+        margin-top: 400px;
+        width: 250px;
+    }
+}
+
+.text-scrolling{
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    z-index: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    font-size: 200px;
+    top: -1500px;
+    left: 200px;
+    cursor:pointer;
+    max-width: 10px;
+
+    animation-name: fading;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+
+@media (max-width: 480px) {
+    .text-scrolling {
+        font-size: 190px; /* You can adjust this value */
+        left: -90px;
+     }
+}
+
+#element-1,
+#element-2,
+#element-3,
+#element-4,
+#element-5,
+#element-6,
+#element-7,
+#element-8,
+#element-9,
+#element-10 {
+
+    filter: blur(20px);
+    animation-name: scrolling-text;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    z-index: 0;
+    
+}
+
+#element-2,
+#element-4,
+#element-6,
+#element-8,
+#element-10{
+    color: #A35139;
+    opacity: 0.5;
+}
+
+#element-1,
+#element-3,
+#element-5,
+#element-7,
+#element-9{
+    color: #EEE9DF; /* Makes the text fill transparent */
+    text-shadow:
+    -2px -2px 0 #1B2632,  /* Top-left shadow */
+     2px -2px 0 #1B2632,  /* Top-right shadow */
+    -2px  2px 0 #1B2632,  /* Bottom-left shadow */
+     2px  2px 0 #1B2632; /* Bottom-right shadow */
+    opacity: 0.6;
+}
+
+.shapes{
+  position: fixed;
+  z-index: 1;
+  opacity: 1;
+  max-width: 100%;
+  cursor:pointer;
+
+    animation-name: fading;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+#shape-1,
+#shape-2,
+#shape-3,
+#shape-4,
+#shape-5,
+#shape-6{
+    position: absolute;
+    background-color: #ffff;
+    padding: 250px 220px 100px 100px;
+    border-radius: 2px;
+    margin-left: 855px;
+    margin-top: 60px;
+    animation-name: rotating-shape;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    z-index: 1;
+}
+
+@media (max-width: 480px) {
+
+  #shape-1,
+  #shape-2,
+  #shape-3,
+  #shape-4,
+  #shape-5,
+  #shape-6{
+        margin-left: 190px; 
+        margin-top: 90px;
+        padding: 200px 155px 100px 100px;
+        border-radius: 2px;
+    }
+}
+
+#shape-2{
+    rotate: calc(30deg);
+}
+
+#shape-3{
+    rotate: calc(60deg);
+}
+
+#shape-4{
+    rotate: calc(90deg);
+}
+
+#shape-5{
+    rotate: calc(120deg);
+}
+
+#shape-6{
+    rotate: calc(150deg);
+}
+
+#shape-7,
+#shape-8,
+#shape-9,
+#shape-10,
+#shape-11,
+#shape-12,
+#shape-13{
+    position: absolute;
+    background-color: #FFB162;
+    padding: 700px 250px 100px 10px;
+    border-radius: 200px;
+    margin-left: 20px;
+    margin-top: 80px;
+    z-index: 1;
+    animation-name: rotating-shape2;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@media (max-width: 480px) {
+
+  #shape-7,
+  #shape-8,
+  #shape-9,
+  #shape-10,
+  #shape-11,
+  #shape-12,
+  #shape-13{
+        margin-left: 180px; 
+        margin-top: 500px;
+        padding: 800px 250px 100px 10px;
+    }
+}
+
+
+#shape-8{
+    rotate: calc(30deg);
+}
+
+#shape-9{
+    rotate: calc(60deg);
+}
+
+#shape-10{
+    rotate: calc(90deg);
+}
+
+#shape-11{
+    rotate: calc(120deg);
+}
+
+#shape-12{
+    rotate: calc(150deg);
+}
+
+#shape-13{
+    rotate: calc(180deg);
+}
+
+#shape-14,
+#shape-15,
+#shape-16,
+#shape-17,
+#shape-18,
+#shape-19,
+#shape-20{
+    position: absolute;
+    background-color: #A35139;
+    padding: 700px 250px 100px 10px;
+    border-radius: 200px;
+    margin-left: -300px;
+    margin-top: -200px;
+    z-index: 0;
+    animation-name: rotating-shape2;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@media (max-width: 480px) {
+  #shape-14,
+  #shape-15,
+  #shape-16,
+  #shape-17,
+  #shape-18,
+  #shape-19,
+  #shape-20{
+        margin-left: -400px; 
+        margin-top: 200px;
+    }
+}
+
+#shape-14{
+    rotate: calc(30deg);
+}
+
+#shape-15{
+    rotate: calc(60deg);
+}
+
+#shape-16{
+    rotate: calc(90deg);
+}
+
+#shape-17{
+    rotate: calc(120deg);
+}
+
+#shape-18{
+    rotate: calc(150deg);
+}
+
+#shape-19{
+    rotate: calc(180deg);
+}
+
+footer {
+
+    background-color: #1B2632;
+    color: #fff;
+    text-align: center;
+    padding: 1px 0px 10px;
+    position: fixed;
+    bottom: -10px;
+    margin-left: -8px;
+    width: 100%;
+    z-index: 3;
+    animation-name: slide-footer;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes slide-footer{
+    0%{
+        transform: translateY(100px);
+    }
+    100%{
+
+    }
+}
+
+@keyframes slide-text{
+    0%{
+        transform: translateY(500px);
+    }
+    100%{
+
+    }
+}
+
+@keyframes slide-text2{
+    0%{
+        transform: translateY(-500px);
+    }
+    100%{
+
+    }
+}
+
+
+@keyframes scrolling-text {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(1500px); /* scrolls downward */
+  }
+  100% {
+    transform: translateY(0); /* returns to start */
+  }
+}
+
+@keyframes rotating-shape{
+  0% {
+    transform: rotate(360deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotating-shape2{
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes fading{
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
